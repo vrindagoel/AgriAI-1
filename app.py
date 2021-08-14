@@ -8,14 +8,12 @@ import shutil
 import plotly.graph_objects as go
 from PIL import Image
 from plotly.subplots import make_subplots
-import cv2
 from PIL import Image, ImageOps
 import numpy as np
 import base64
 import path
 import json
 import streamlit.components.v1 as components
-import joblib
 
 
 import tensorflow as tf
@@ -96,24 +94,6 @@ def img_to_bytes(img_path):
 #@st.cache(allow_output_mutation=True)
 
 def main():
-
-    components.html("""
-
-    <div id="google_translate_element"></div><script>
-
-    function googleTranslateElementInit() {
-
-    new google.translate.TranslateElement({
-
-    pageLanguage: 'en'
-
-    }, 'google_translate_element');
-
-    }
-
-    </script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
-    """,height=100,)
 
     html_temp = """
     <div>
